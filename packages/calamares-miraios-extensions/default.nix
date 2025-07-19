@@ -1,8 +1,7 @@
 { 
   stdenv,
   fetchFromGitHub,
-  lib,
-  ...
+  lib
 }: 
 stdenv.mkDerivation (finalAttrs: {
   pname = "calamares-miraios-extensions";
