@@ -4,14 +4,14 @@
   lib,
   ...
 }: 
-
 stdenv.mkDerivation (finalAttrs: {
   pname = "calamares-miraios-extensions";
   version = "1.0.0";
   src = fetchFromGitHub {
     owner = "mirai-the-future";
     repo = "calamares-miraios-extensions";
-    hash = "sha256-0qwpvlfryvwjq5bs4ixd3aj6plhjhyk0hna93sisn3771xbgyhcw";
+    rev = "01afedc97d75decdfe319db527feacd6edca0f56";
+    hash = "sha256-E6BZYBCf8czC1d7rnE9M0QvBNh3G33omhkE3Rbivkvs=";
   };
 
   installPhase = ''
