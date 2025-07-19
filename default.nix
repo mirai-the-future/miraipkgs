@@ -1,5 +1,11 @@
-{nixpkgs ? import <nixpkgs> {}}:
+{ lib, ... }:
+
+let
+  nixpkgs = import <nixpkgs> { };
+  miraiPkgs = import ./packages { inherit nixpkgs; };
+  #myModules = import ./nixos-modules { inherit nixpkgs; };
+in
 {
-  inherit (nixpkgs) callPackage;
-  calamares-miraios-extensions ./packages/calamares-miraios-extensions {};
+  packages = miraiPkgs;
+  #modules = myModules;
 }
