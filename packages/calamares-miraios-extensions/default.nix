@@ -9,8 +9,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mirai-the-future";
     repo = "calamares-miraios-extensions";
-    rev = "4e944fcafcfb257f42a7125e7f8f76399795e28d";
-    hash = "sha256-3K6QdG5i0HocI2vTXtLTfEkLBx1HPzQsBFx2dT1T5sI=";
+    rev = "04889d0b9b344e9ac727264cb711c167ba6eecd7";
+    hash = "sha256-c4Hfr5Rz0kJ1fxqyxyvGqWIMr2/pqIs4XFHzMLoHXxk=";
   };
 
   installPhase = ''
