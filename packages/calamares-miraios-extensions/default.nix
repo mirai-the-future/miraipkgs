@@ -1,12 +1,13 @@
-{
+{ 
   stdenv,
   fetchFromGitHub,
   lib,
-}:
+  ...
+}: 
+
 stdenv.mkDerivation (finalAttrs: {
   pname = "calamares-miraios-extensions";
-  version = "0.0.1";
-
+  version = "1.0.0";
   src = fetchFromGitHub {
     owner = "mirai-the-future";
     repo = "calamares-miraios-extensions";
@@ -25,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   meta = with lib; {
     description = "Calamares modules for MiraiOS";
     homepage = "https://github.com/mirai-the-future/calamares-miraios-extensions";
-     license = with licenses; [
+    license = with licenses; [
       gpl3Plus
       bsd2
       cc-by-40
@@ -34,5 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     ];
     maintainers = with maintainers; [ jerezoff ];
     platforms = platforms.linux;
-  }
-})
+  };
+}) 
